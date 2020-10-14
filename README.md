@@ -30,3 +30,29 @@ Then call nextflow with `with-docker` parameter:
 ```
 $ nextflow run script2.nf -with-docker
 ```
+
+Adding:
+
+```
+docker.enabled=true
+```
+
+to `nextflow.config` let to avoid specifing `-with-docker` parameter when calling nextflow
+
+Override parameters using cmd
+-----------------------------
+
+Override the default `reads` parameter:
+
+```
+$ nextflow run script3.nf --reads 'data/ggal/*_{1,2}.fq' -resume
+```
+
+Calling:
+
+```
+$ nextflow run script4.nf
+$ nextflow run script4.nf -resume --reads 'data/ggal/*_{1,2}.fq'
+```
+
+will execute only the new calculations and will re-use the old computed results
