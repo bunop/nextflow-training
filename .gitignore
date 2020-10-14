@@ -4,3 +4,8 @@
 # ignore results dir
 work/
 results/
+
+# ignore other nextflow reports
+*.html*
+*.png*
+*.txt*

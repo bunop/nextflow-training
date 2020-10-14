@@ -56,3 +56,20 @@ $ nextflow run script4.nf -resume --reads 'data/ggal/*_{1,2}.fq'
 ```
 
 will execute only the new calculations and will re-use the old computed results
+
+Calling a nextflow project using git
+------------------------------------
+
+calling nextflow on this git repository: https://github.com/nextflow-io/rnaseq-nf.git
+
+```
+$ nextflow run nextflow-io/rnaseq-nf
+```
+
+I can call a specific revison of a nextflow git pipeline. Or by calling:
+
+```
+$ nextflow run rnaseq-nf -with-docker -with-report -with-trace -with-timeline -with-dag dag.png -resume
+```
+
+I can generate some useful reports
