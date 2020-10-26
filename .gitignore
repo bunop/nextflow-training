@@ -4,8 +4,12 @@
 # ignore results dir
 work/
 results/
+transcript-index/
 
 # ignore other nextflow reports
 *.html*
 *.png*
 *.txt*
+
+# ignore singularity files
+*.sif
